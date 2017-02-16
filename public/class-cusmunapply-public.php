@@ -144,6 +144,24 @@ class Cusmunapply_Public {
 		class FormFields extends React.Component {
 			constructor(props) {
 				super(props);
+				this.state = {
+					schoolname: '',
+					schoollocation: '',
+					teachername: '',
+					teacheremail: '',
+					delegationnumber: '',
+					postexperience: '',
+					sendstudents: false
+				}
+				this.handleInputChange = this.handleInputChange.bind(this);
+			}
+			handleInputChange(event) {
+				const target = event.target;
+				const value = target.type === 'checkbox' ? target.checked : target.value;
+				const name = target.name;
+		    this.setState({
+		      [name]: value
+		    });
 			}
 			render() {
 				return (
@@ -155,34 +173,32 @@ class Cusmunapply_Public {
 							<input type="hidden" name="action" value="process_uk_form" />
 							<label>
 							Name of your school:
-							<input type="text" />
+							<input onChange={this.handleInputChange} value={this.state.schoolname} name="schoolname" type="text" />
 							</label>
 							<label>
 							Which part of the UK is your school is from:
-							<input type="text" />
+							<input onChange={this.handleInputChange} value={this.state.schoollocation} name="schoollocation" type="text" />
 							</label>
 							<label>
 							Name of teacher who will accompany delegation:
-							<input type="text"/>
+							<input onChange={this.handleInputChange} value={this.state.teachername} name="teachername" type="text"/>
 							</label>
 							<label>
 							Email of teacher who will accompany delegation:
-							<input type="text" />
+							<input onChange={this.handleInputChange} value={this.state.teacheremail} name="teacheremail" type="text" />
 							</label>
 							<label>
-							Number of students your delegation be composed of:
-							<input type="text" />
+							Number of students your delegation will be composed of:
+							<input onChange={this.handleInputChange} value={this.state.delegationnumber} name="delegationnumber" type="text" />
 							</label>
-							<input type="checkbox" name="vehicle" value="no" />My school is willing to send students to assist with the chairing process at the conference<br/>
-  						<input type="checkbox" name="vehicle" value="yes" checked /> My schol is not willing to send students to assist with the chairing process at the conference<br/><br/>
+							<input type="checkbox" name="sendstudents" onChange={this.handleInputChange} value={this.state.sendstudents} />My school is willing to send students to assist with the chairing process at the conference<br/>
 							<label>
 							Please state any past experience your school has had with Model United Nations:
-							<textarea></textarea>
+							<textarea onChange={this.handleInputChange} value={this.state.postexperience} name="postexperience"></textarea>
 							</label>
-							<label>
-							Click this box to agree to the terms of CUSMUN:
-							<input type="checkbox" name="vehicle" value="yes" />
-							</label><br/>
+							<p>
+							<i>By submitting this form you agree to the terms of CUSMUN</i>
+							</p><br/>
 							<input type="submit" value="Submit"/>
 							</form>
 						</div>
