@@ -170,6 +170,15 @@ class Cusmunapply {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 		$this->loader->add_action('init', $plugin_public, 'register_cusmun_shortcode');
+		// process UK form
+		$this->loader->add_action( 'admin_post_nopriv_process_uk_form', $plugin_public, 'process_uk_form' );
+		$this->loader->add_action( 'admin_post_process_uk_form', $plugin_public, 'process_uk_form' );
+		// process internatinoal form
+		$this->loader->add_action( 'admin_post_nopriv_process_international_form', $plugin_public, 'process_international_form' );
+		$this->loader->add_action( 'admin_post_process_international_form', $plugin_public, 'process_international_form' );
+		// process cambridge forms
+		$this->loader->add_action( 'admin_post_nopriv_process_cambridge_form', $plugin_public, 'process_cambridge_form' );
+		$this->loader->add_action( 'admin_post_process_cambridge_form', $plugin_public, 'process_cambridge_form' );
 
 	}
 

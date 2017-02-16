@@ -151,7 +151,8 @@ class Cusmunapply_Public {
 					{this.props.region == "UK" && (
 						<div>
 							<p>UK Form</p>
-							<form>
+							<form action="<?php echo admin_url('admin-post.php'); ?>" method="post">
+							<input type="hidden" name="action" value="process_uk_form" />
 							<label>
 							Name of your school:
 							<input type="text" />
@@ -189,7 +190,8 @@ class Cusmunapply_Public {
 					{this.props.region == "Other" && (
 						<div>
 							<p>International Form</p>
-							<form>
+							<form action="<?php echo admin_url('admin-post.php'); ?>" method="post">
+							<input type="hidden" name="action" value="process_international_form" />
 							<label>
 							Name of your school:
 							<input type="text" />
@@ -227,7 +229,8 @@ class Cusmunapply_Public {
 					{this.props.region == "Cambridge" && (
 						<div>
 							<p>Cambridge Form</p>
-							<form>
+							<form action="<?php echo admin_url('admin-post.php'); ?>" method="post">
+							<input type="hidden" name="action" value="process_cambridge_form" />
 							<label>
 							Name of your school:
 							<input type="text" />
@@ -272,6 +275,18 @@ class Cusmunapply_Public {
 		</script>
 <?php
 
+	}
+	public function process_uk_form() {
+		// processes UK form submition
+		var_dump($POST);
+	}
+	public function process_international_form() {
+		// process international form
+		var_dump($POST);
+
+	}
+	public function process_cambridge_form() {
+		var_dump($POST);
 	}
 
 }
