@@ -150,7 +150,7 @@ class Cusmunapply_Public {
 					<div>
 					{this.props.region == "UK" && (
 						<div>
-							<p>International Form</p>
+							<p>UK Form</p>
 							<form>
 							<label>
 							Name of your school:
