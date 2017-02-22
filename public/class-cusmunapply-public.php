@@ -297,7 +297,8 @@ class Cusmunapply_Public {
 		$teacheremail = $_REQUEST['teacheremail'];
 		$delegationnumber = $_REQUEST['delegationnumber'];
 		$postexperience = $_REQUEST['postexperience'];
-		mail('jakeo@tgs.org', 'Subject', 'test message');
+		$message = array('schoolname' => $schoolname, 'schoollocation' => $schoollocation, 'teachername' => $teachername, 'teacheremail' => $teacheremail, 'delegationnumber' => $delegationnumber, 'pastexperience' => $postexperience );
+		mail('jakeo@tgs.org', 'Subject', $message);
 
 	}
 	public function process_international_form() {
