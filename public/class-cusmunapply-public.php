@@ -297,8 +297,8 @@ class Cusmunapply_Public {
 		$teacheremail = $_REQUEST['teacheremail'];
 		$delegationnumber = $_REQUEST['delegationnumber'];
 		$postexperience = $_REQUEST['postexperience'];
-		$message = array('schoolname' => $schoolname, 'schoollocation' => $schoollocation, 'teachername' => $teachername, 'teacheremail' => $teacheremail, 'delegationnumber' => $delegationnumber, 'pastexperience' => $postexperience );
-		mail('jakeo@tgs.org', 'Subject', $message);
+		$message = "You have received a new CUSMUN Application.\n\n"."Here are the details:\n\nSchool Name: $schoolname\n\nSchool Location: $schoollocation\n\nTeachers Name: $teachername\n\nTeacher Email:\n$teacheremail\n\nNumber of Delegates: $delegationnumber\n\nPast Experience: $postexperience";
+		mail('jakeo@tgs.org', 'New CUSMUN Application', $message);
 
 	}
 	public function process_international_form() {
