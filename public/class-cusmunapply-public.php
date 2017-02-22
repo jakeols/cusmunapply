@@ -174,23 +174,23 @@ class Cusmunapply_Public {
 							<input type="hidden" name="action" value="process_uk_form" />
 							<label>
 							Name of your school:
-							<input onChange={this.handleInputChange} value={this.state.schoolname} name="schoolname" type="text" />
+							<input onChange={this.handleInputChange} value={this.state.schoolname} name="schoolname" type="text" /><br/>
 							</label>
 							<label>
 							Which part of the UK is your school is from:
-							<input onChange={this.handleInputChange} value={this.state.schoollocation} name="schoollocation" type="text" />
+							<input onChange={this.handleInputChange} value={this.state.schoollocation} name="schoollocation" type="text" /><br/>
 							</label>
 							<label>
 							Name of teacher who will accompany delegation:
-							<input onChange={this.handleInputChange} value={this.state.teachername} name="teachername" type="text"/>
+							<input onChange={this.handleInputChange} value={this.state.teachername} name="teachername" type="text"/><br/>
 							</label>
 							<label>
 							Email of teacher who will accompany delegation:
-							<input onChange={this.handleInputChange} value={this.state.teacheremail} name="teacheremail" type="text" />
+							<input onChange={this.handleInputChange} value={this.state.teacheremail} name="teacheremail" type="text" /><br/>
 							</label>
 							<label>
 							Number of students your delegation will be composed of:
-							<input onChange={this.handleInputChange} value={this.state.delegationnumber} name="delegationnumber" type="text" />
+							<input onChange={this.handleInputChange} value={this.state.delegationnumber} name="delegationnumber" type="text" /><br/>
 							</label>
 							<input type="checkbox" name="sendstudents" onChange={this.handleInputChange} value={this.state.sendstudents} />My school is willing to send students to assist with the chairing process at the conference<br/>
 							<label>
@@ -211,23 +211,23 @@ class Cusmunapply_Public {
 							<input type="hidden" name="action" value="process_international_form" />
 							<label>
 							Name of your school:
-							<input name="schoolname" value={this.state.schoolname} onChange={this.handleInputChange} type="text" />
+							<input name="schoolname" value={this.state.schoolname} onChange={this.handleInputChange} type="text" /><br/>
 							</label>
 							<label>
 							Country your school is from:
-							<input name="schoolcountry" value={this.state.schoolcountry} onChange={this.handleInputChange} type="text" />
+							<input name="schoolcountry" value={this.state.schoolcountry} onChange={this.handleInputChange} type="text" /><br/>
 							</label>
 							<label>
 							Name of teacher who will accompany delegation:
-							<input name="teachername" value={this.state.teachername} onChange={this.handleInputChange} type="text"/>
+							<input name="teachername" value={this.state.teachername} onChange={this.handleInputChange} type="text"/><br/>
 							</label>
 							<label>
 							Email of teacher who will accompany delegation:
-							<input name="teacheremail" value={this.state.teacheremail} onChange={this.handleInputChange} type="text" />
+							<input name="teacheremail" value={this.state.teacheremail} onChange={this.handleInputChange} type="text" /><br/>
 							</label>
 							<label>
-							Number of students your delegation be composed of:
-							<input name="delegationnumber" value={this.state.delegationnumber} type="text" />
+							Number of students your delegation will be composed of:
+							<input name="delegationnumber" value={this.state.delegationnumber} onChange={this.handleInputChange} type="text" /><br/>
 							</label>
 							<input type="checkbox" name="sendstudents" value={this.state.sendstudents} onChange={this.handleInputChange} />My school is willing to send students to assist with the chairing process at the conference<br/>
 							<label>
@@ -248,19 +248,19 @@ class Cusmunapply_Public {
 							<input type="hidden" name="action" value="process_cambridge_form" />
 							<label>
 							Name of your school:
-							<input name="schoolname" value={this.state.schoolname} onChange={this.handleInputChange} type="text" />
+							<input name="schoolname" value={this.state.schoolname} onChange={this.handleInputChange} type="text" /><br/>
 							</label>
 							<label>
 							Name of teacher who will accompany delegation:
-							<input name="teachername" value={this.state.teachername} onChange={this.handleInputChange} type="text"/>
+							<input name="teachername" value={this.state.teachername} onChange={this.handleInputChange} type="text"/><br/>
 							</label>
 							<label>
 							Email of teacher who will accompany delegation:
-							<input name="teacheremail" value={this.state.teacheremail} onChange={this.handleInputChange} type="text" />
+							<input name="teacheremail" value={this.state.teacheremail} onChange={this.handleInputChange} type="text" /><br/>
 							</label>
 							<label>
-							Number of students your delegation be composed of:
-							<input name="delegationnumber" value={this.state.delegationnumber} onChange={this.handleInputChange} type="text" />
+							Number of students your delegation will be composed of:
+							<input name="delegationnumber" value={this.state.delegationnumber} onChange={this.handleInputChange} type="text" /><br/>
 							</label>
 							<input name="sendstudents" type="checkbox" name="sendstudents" value={this.state.sendstudents} onChange={this.handleInputChange} />My school is willing to send students to assist with the chairing process at the conference<br/>
 							<label>
@@ -291,7 +291,12 @@ class Cusmunapply_Public {
 	}
 	public function process_uk_form() {
 		// processes UK form submition
-		var_dump($POST);
+		$schoolname = $_REQUEST['schoolname'];
+		$schoollocation = $_REQUEST['schoollocation'];
+		$teachername = $_REQUEST['teachername'];
+		$teacheremail = $_REQUEST['teacheremail'];
+		$delegationnumber = $_REQUEST['delegationnumber'];
+		$postexperience = $_REQUEST['postexperience'];
 	}
 	public function process_international_form() {
 		// process international form
@@ -299,7 +304,7 @@ class Cusmunapply_Public {
 
 	}
 	public function process_cambridge_form() {
-		var_dump($POST);
+		var_dump($_REQUEST);
 	}
 
 }
