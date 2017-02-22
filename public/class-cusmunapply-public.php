@@ -297,17 +297,41 @@ class Cusmunapply_Public {
 		$teacheremail = $_REQUEST['teacheremail'];
 		$delegationnumber = $_REQUEST['delegationnumber'];
 		$postexperience = $_REQUEST['postexperience'];
-		$message = "You have received a new CUSMUN Application.\n\n"."Here are the details:\n\nSchool Name: $schoolname\n\nSchool Location: $schoollocation\n\nTeachers Name: $teachername\n\nTeacher Email:\n$teacheremail\n\nNumber of Delegates: $delegationnumber\n\nPast Experience: $postexperience";
+		$sendstudents = $_REQUEST['sendstudents'];
+		$message = "You have received a new CUSMUN Application.\n\n"."Here are the details:\n\nSchool Name: $schoolname\n\nSchool Location: $schoollocation\n\nTeachers Name: $teachername\n\nTeacher Email:\n$teacheremail\n\nNumber of Delegates: $delegationnumber\n\nWilling to Send Students to Assist: $sendstudents\n\nPast Experience: $postexperience";
 		mail('jakeo@tgs.org', 'New CUSMUN Application', $message);
 
 	}
 	public function process_international_form() {
 		// process international form
-		var_dump($POST);
+
+		$schoolname = $_REQUEST['schoolname'];
+		$schoolcountry = $_REQUEST['schoolcountry'];
+		$teachername = $_REQUEST['teachername'];
+		$teacheremail = $_REQUEST['teacheremail'];
+		$delegationnumber = $_REQUEST['delegationnumber'];
+		$postexperience = $_REQUEST['postexperience'];
+		$sendstudents = $_REQUEST['sendstudents'];
+		$message = "You have received a new CUSMUN Application.\n\n"."Here are the details:\n\nSchool Name: $schoolname\n\nSchool Location: $schoolcountry\n\nTeachers Name: $teachername\n\nTeacher Email:\n$teacheremail\n\nNumber of Delegates: $delegationnumber\n\nWilling to Send Students to Assist: $sendstudents\n\nPast Experience: $postexperience";
+		mail('jakeo@tgs.org', 'New CUSMUN Application', $message);
+
+
 
 	}
 	public function process_cambridge_form() {
+		// process cambridge form
 		var_dump($_REQUEST);
+		$schoolname = $_REQUEST['schoolname'];
+		$teachername = $_REQUEST['teachername'];
+		$teacheremail = $_REQUEST['teacheremail'];
+		$delegationnumber = $_REQUEST['delegationnumber'];
+		$postexperience = $_REQUEST['postexperience'];
+		$sendstudents = $_REQUEST['sendstudents'];
+		$message = "You have received a new CUSMUN Application.\n\n"."Here are the details:\n\nSchool Name: $schoolname\n\nSchool Location: 'Cambridge'\n\nTeachers Name: $teachername\n\nTeacher Email:\n$teacheremail\n\nNumber of Delegates: $delegationnumber\n\nWilling to Send Students to Assist: $sendstudents\n\nPast Experience: $postexperience";
+		mail('jakeo@tgs.org', 'New CUSMUN Application', $message);
+
+
+
 	}
 
 }
