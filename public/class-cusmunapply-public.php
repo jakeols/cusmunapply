@@ -300,7 +300,8 @@ class Cusmunapply_Public {
 		$sendstudents = $_REQUEST['sendstudents'];
 		$message = "You have received a new CUSMUN Application.\n\n"."Here are the details:\n\nSchool Name: $schoolname\n\nSchool Location: $schoollocation\n\nTeachers Name: $teachername\n\nTeacher Email:\n$teacheremail\n\nNumber of Delegates: $delegationnumber\n\nWilling to Send Students to Assist: $sendstudents\n\nPast Experience: $postexperience";
 		mail('jakeo@tgs.org', 'New CUSMUN Application', $message);
-
+		wp_redirect('http://cusmun.com/index.php/success/');
+		exit;
 	}
 	public function process_international_form() {
 		// process international form
@@ -314,7 +315,8 @@ class Cusmunapply_Public {
 		$sendstudents = $_REQUEST['sendstudents'];
 		$message = "You have received a new CUSMUN Application.\n\n"."Here are the details:\n\nSchool Name: $schoolname\n\nSchool Location: $schoolcountry\n\nTeachers Name: $teachername\n\nTeacher Email:\n$teacheremail\n\nNumber of Delegates: $delegationnumber\n\nWilling to Send Students to Assist: $sendstudents\n\nPast Experience: $postexperience";
 		mail('jakeo@tgs.org', 'New CUSMUN Application', $message);
-
+		wp_redirect('http://cusmun.com/index.php/success/');
+		exit;
 
 
 	}
@@ -328,6 +330,8 @@ class Cusmunapply_Public {
 		$sendstudents = $_REQUEST['sendstudents'];
 		$message = "You have received a new CUSMUN Application.\n\n"."Here are the details:\n\nSchool Name: $schoolname\n\nSchool Location: 'Cambridge'\n\nTeachers Name: $teachername\n\nTeacher Email:\n$teacheremail\n\nNumber of Delegates: $delegationnumber\n\nWilling to Send Students to Assist: $sendstudents\n\nPast Experience: $postexperience";
 		mail('jakeo@tgs.org', 'New CUSMUN Application', $message);
+		wp_redirect('http://cusmun.com/index.php/success/');
+		exit;
 
 
 
