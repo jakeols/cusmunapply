@@ -320,7 +320,6 @@ class Cusmunapply_Public {
 	}
 	public function process_cambridge_form() {
 		// process cambridge form
-		var_dump($_REQUEST);
 		$schoolname = $_REQUEST['schoolname'];
 		$teachername = $_REQUEST['teachername'];
 		$teacheremail = $_REQUEST['teacheremail'];
