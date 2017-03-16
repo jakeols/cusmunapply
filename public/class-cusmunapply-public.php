@@ -346,7 +346,7 @@ class Cusmunapply_Public {
 
 	}
 	function countdown_cusmun() {
-		echo '<div class="clock"></div>';
+		echo '<div style="margin-left: auto; margin-right: auto; width: 650px;" class="clock"></div>';
 ?>
 <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
