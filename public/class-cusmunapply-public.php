@@ -346,7 +346,32 @@ class Cusmunapply_Public {
 
 	}
 	function countdown_cusmun() {
-		echo '<div style="margin-left: auto; margin-right: auto; width: 650px;" class="clock"></div>';
+		?>
+		<style>
+		.outermost-div{
+    overflow:hidden;
+}
+
+	.inner-div{
+	   float:left;
+	   left:50%;
+	   position: relative;
+	}
+
+	.centerthisdiv {
+	   position:relative;
+	   left: -50%;
+	   float:right;
+	   width:auto;
+	}
+		</style>
+		<?php
+		echo '<div class="outermost-div">';
+		echo '<div class="inner-div">';
+		echo '<div class="centerthisdiv clock"></div>';
+		echo '</div>';
+		echo '</div>';
+
 ?>
 <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
