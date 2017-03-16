@@ -353,18 +353,17 @@ class Cusmunapply_Public {
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
 	<script>
-	var countDownDate = new Date("Jan 5, 2018 15:37:25").getTime();
-	var now = new Date().getTime();
-	var distance = countDownDate - now;
+	var currentDate = new Date();
+	var futureDate = new Date("September 15, 2017 14:00:00");
+	// var futureDate  = new Date(currentDate.getFullYear() + 9, 1, 5);
+	var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
 
-
-
-	var clock = new FlipClock($('.clock'), {
-// ... your options here
-
+	var clock = new FlipClock($('.clock'), diff, {
+	// ... your options here
+	clockFace: 'DailyCounter',
+	countdown: true
 	});
-	clock.setCountdown(true);
-	clock.setTime(3600 * 24 * 3);
+
 		</script>
 		<?php
 
