@@ -73,7 +73,8 @@ class Cusmunapply_Public {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/cusmunapply-public.css', array(), $this->version, 'all' );
+		 wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/cusmunapply-public.css', array(), $this->version, 'all' );
+		 wp_enqueue_style( 'flipclock', plugin_dir_url( __FILE__ ) . 'css/flipclock.css', array(), $this->version, 'all' );
 
 	}
 
@@ -97,11 +98,16 @@ class Cusmunapply_Public {
 		 */
 
 		 wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/cusmunapply-public.js', array( 'jquery' ), $this->version, false );
+		 wp_enqueue_script( 'flipclock', plugin_dir_url( __FILE__ ) . 'js/flipclock.min.js', array( 'jquery' ), $this->version, false );
+
 
 	}
 
 	function register_cusmun_shortcode() {
 		add_shortcode( 'cusmun_form', array( $this, 'shortcode_cusmun' ) );
+	}
+	function register_cusmun_countdown() {
+		add_shortcode('cusmun_countdown', array($this, 'countdown_cusmun'));
 	}
 	function shortcode_cusmun($args) {
 		echo '<div id="cusmunapplyform"></div>';
@@ -337,6 +343,31 @@ class Cusmunapply_Public {
 		exit;
 
 
+
+	}
+	function countdown_cusmun() {
+		echo '<h1>Test</h1>';
+		echo '<div class="clock"></div>';
+?>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+	<script>
+	var countDownDate = new Date("Jan 5, 2018 15:37:25").getTime();
+	var now = new Date().getTime();
+	var distance = countDownDate - now;
+
+
+
+	var clock = new FlipClock($('.clock'), {
+// ... your options here
+
+	});
+	clock.setCountdown(true);
+	clock.setTime(3600 * 24 * 3);
+		</script>
+		<?php
 
 	}
 
