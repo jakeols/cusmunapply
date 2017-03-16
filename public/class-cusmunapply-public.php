@@ -346,7 +346,6 @@ class Cusmunapply_Public {
 
 	}
 	function countdown_cusmun() {
-		echo '<h1>Test</h1>';
 		echo '<div class="clock"></div>';
 ?>
 <script
