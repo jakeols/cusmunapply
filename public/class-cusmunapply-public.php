@@ -205,7 +205,7 @@ class Cusmunapply_Public {
 							<textarea onChange={this.handleInputChange} value={this.state.postexperience} name="postexperience"></textarea>
 							</label>
 							<p>
-							<i>By submitting this form you agree to the terms of CUSMUN</i>
+							<i>By submitting this form you agree to the <a href="http://cusmun.com/index.php/cusmun-terms-and-conditions/">CUSMUN Terms and Conditions</a></i>
 							</p><br/>
 							<input type="submit" value="Submit"/>
 							</form>
@@ -243,7 +243,7 @@ class Cusmunapply_Public {
 							<textarea name="postexperience" value={this.state.postexperience} onChange={this.handleInputChange}></textarea>
 							</label>
 							<p>
-							<i>By submitting this form you agree to the terms of CUSMUN</i>
+							<i>By submitting this form you agree to the <a href="http://cusmun.com/index.php/cusmun-terms-and-conditions/">CUSMUN Terms and Conditions</a></i>
 							</p><br/>
 							<input type="submit" value="Submit"/>
 							</form>
@@ -277,7 +277,7 @@ class Cusmunapply_Public {
 							<textarea name="postexperience" value={this.state.postexperience} onChange={this.handleInputChange}></textarea>
 							</label>
 							<p>
-							<i>By submitting this form you agree to the terms of CUSMUN</i>
+							<i>By submitting this form you agree to the <a href="http://cusmun.com/index.php/cusmun-terms-and-conditions/">CUSMUN Terms and Conditions</a></i>
 							</p><br/>
 							<input type="submit" value="Submit"/>
 							</form>
