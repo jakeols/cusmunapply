@@ -176,7 +176,7 @@ class Cusmunapply_Public {
 					{this.props.region == "UK" && (
 						<div>
 							<p>UK Form</p>
-							<p>The conference will be held in Cambridge from 15th-17th September. If you are coming from outside of Cambridge and would like to be provided with accommodation, please indicate your requirement for the same on the application form. The fees for the conference are £230 (with accommodation) and £120 (without accommodation). This includes food/ drink, formal dinner, socials and CUSMUN memorabilia. </p>
+							<p>The conference will be held in Cambridge from 15th-17th September. If you are coming from outside of Cambridge and would like to be provided with accommodation, please indicate your requirement for the same on the application form. The fees for the conference are £230 (with accommodation) and £100 (without accommodation). This includes food/ drink, formal dinner, socials and CUSMUN memorabilia. Please note, there must be a student to teacher ratio of 10:1. </p>
 							<form action="<?php echo admin_url('admin-post.php'); ?>" method="post">
 							<input type="hidden" name="action" value="process_uk_form" />
 							<label>
@@ -214,7 +214,7 @@ class Cusmunapply_Public {
 					{this.props.region == "Other" && (
 						<div>
 							<p>International Form</p>
-							<p>The conference will be held in Cambridge from 15th-17th September. The fees for the conference are £230 and includes accommodation, food/ drink, formal dinner, socials and CUSMUN memorabilia. Note that this does NOT include travel costs of any kind or personal expenses. Please indicate any dietary requirements, special needs etc. you may need on the application form below. </p>
+							<p>The conference will be held in Cambridge from 15th-17th September. The fees for the conference are £230 and includes accommodation, food/ drink, formal dinner, socials and CUSMUN memorabilia. Note that this does NOT include travel costs of any kind or personal expenses. Please note, there must be a student to teacher ratio of 10:1.</p>
 							<form action="<?php echo admin_url('admin-post.php'); ?>" method="post">
 							<input type="hidden" name="action" value="process_international_form" />
 							<label>
@@ -252,7 +252,7 @@ class Cusmunapply_Public {
 					{this.props.region == "Cambridge" && (
 						<div>
 							<p>Cambridge Form</p>
-							<p>The conference will be held in Cambridge from 15th-17th September. If you are coming from outside of Cambridge and would like to be provided with accommodation, please indicate your requirement for the same on the application form. The fees for the conference are £230 (with accommodation) and £120 (without accommodation). This includes food/ drink, formal dinner, socials and CUSMUN memorabilia. </p>
+							<p>The conference will be held in Cambridge from 15th-17th September. If you are coming from outside of Cambridge and would like to be provided with accommodation, please indicate your requirement for the same on the application form. The fees for the conference are £230 (with accommodation) and £100 (without accommodation). This includes food/ drink, formal dinner, socials and CUSMUN memorabilia. Please note, there must be a student to teacher ratio of 10:1. </p>
 							<form action="<?php echo admin_url('admin-post.php'); ?>" method="post">
 							<input type="hidden" name="action" value="process_cambridge_form" />
 							<label>
@@ -349,7 +349,7 @@ class Cusmunapply_Public {
 		?>
 		<style>
 		.outermost-div{
-    
+
 }
 
 	.inner-div{
